@@ -10,6 +10,8 @@ abbr --add gs git status
 
 # Zig build.
 abbr --add zb zig build
+abbr --add zbw zig build --watch --debounce 200
+abbr --add zbr zig build run
 abbr --add zbf zig build -Doptimize=ReleaseFast
 abbr --add zbfl zig build -Doptimize=ReleaseFast --prefix ~/.local
 abbr --add zbs zig build -Doptimize=ReleaseSafe
