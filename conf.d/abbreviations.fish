@@ -16,9 +16,16 @@ abbr --add zbf zig build -Doptimize=ReleaseFast
 abbr --add zbfl zig build -Doptimize=ReleaseFast --prefix ~/.local
 abbr --add zbs zig build -Doptimize=ReleaseSafe
 abbr --add zbsl zig build -Doptimize=ReleaseSafe --prefix ~/.local
+abbr --add zbt zig build test --summary all
 
 if type --query eza
     abbr --add ls eza --icons
     abbr --add ll eza --icons -lh
     abbr --add la eza --icons -lha
+end
+
+if type --query bat
+    abbr --add cat bat
+else if type --query zat
+    abbr --add cat zat
 end
