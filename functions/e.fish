@@ -23,12 +23,22 @@ function e --description 'opens a fuzzy file selector to open your editor if ava
         # Otherwise: open the provided file in the editor.
         if test -d $argv
             cd $argv
-            $EDITOR ($find | $fuzzer)
+            set file ($find | $fuzzer)
+            if test -z $file
+                return 1
+            end
+
+            $EDITOR $file
         else
             $EDITOR $argv
         end
     else
         # If nothing is provided, open a picker for files in the current directory.
-        $EDITOR ($find | $fuzzer)
+        set file ($find | $fuzzer)
+        if test -z $file
+            return 1
+        end
+
+        $EDITOR $file
     end
 end
