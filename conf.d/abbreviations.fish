@@ -16,6 +16,7 @@ abbr --add zbf zig build -Doptimize=ReleaseFast
 abbr --add zbfl zig build -Doptimize=ReleaseFast --prefix ~/.local
 abbr --add zbs zig build -Doptimize=ReleaseSafe
 abbr --add zbsl zig build -Doptimize=ReleaseSafe --prefix ~/.local
+abbr --add zt zig test
 abbr --add zbt zig build test --summary all
 
 if type --query eza
