@@ -1,7 +1,7 @@
 function pp
     if not type --query project-picker
         echo "project-picker not installed"
-        exit 1
+        return 1
     end
 
     set dir (project-picker)
