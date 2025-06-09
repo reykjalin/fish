@@ -8,6 +8,13 @@ abbr --add gpl git pull
 abbr --add gplr git pull --rebase
 abbr --add gs git status
 
+function remote_and_branch
+    set branch (git rev-parse --abbrev-ref HEAD)
+    echo (git config --get branch.$branch.remote) $branch
+end
+
+abbr --command git ob --function remote_and_branch
+
 # Zig build.
 abbr --add zb zig build
 abbr --add zbw zig build --watch --debounce 200
