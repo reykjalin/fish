@@ -21,7 +21,7 @@ abbr --command git cb --function remote_and_branch
 
 # Zig build.
 abbr --add zb zig build
-abbr --add zbw zig build --watch --debounce 200
+abbr --add zbw zig build --watch
 abbr --add zbr zig build run
 abbr --add zbf zig build -Doptimize=ReleaseFast
 abbr --add zbfl zig build -Doptimize=ReleaseFast --prefix ~/.local
