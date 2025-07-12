@@ -5,7 +5,7 @@ function j
         set should_alter_history yes
     end
 
-    set dir (fd . --type d --max-depth 4 | zf --height 40 --preview 'eza --icons -lh ')
+    set dir (fd . --type d --max-depth 4 | zf --height 40 --preview 'eza --icons=always -1 --classify=always ')
     if test -z "$dir"
         cd "$old_cwd"
         if test -n "$should_alter_history"
